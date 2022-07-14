@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+	<title> KanalService </title>
+</head>
+<body>
+	<header class='header' >
+		<p>TEST PAGE</p>
+	</header>
+	<div class='content'>
+		<aside class='content_sidebar'>
+
+		</aside>
+		<section class='content_section'>
+			
+
+			<div class="contetn_div"> 
+
+				<table border="1">
+
+					<tr>
+						<th>TOTAL</th>
+					</tr>
+						<td> {{ total }} </td>
+					</tr>
+
+
+				</table>
+			</div>
+			
+
+			<div class="contetn_div">
+				<table border="1">
+
+					<tr>
+						<th>№</th>
+						<th>Заказ №</th>
+						<th>Стоимость, $</th>
+						<th>Срок поставки</th>
+						<th>Стоимость, Rub</th>
+
+				{% for order in orders %}
+					</tr>
+						{% for item in order %}
+							<td> {{ item }} </td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+
+
+				</table>
+			</div>
+		</section>
+	</div>
+	<footer class='footer'>FOOTER</footer>
+</body>
+</html>
