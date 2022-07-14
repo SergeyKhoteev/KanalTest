@@ -155,6 +155,10 @@ def update_records(relation_name, list_with_data, usd_value):
 					conn.commit()
 					print(str(key) + " was added")
 
+					if SUPPLY_DATE < datetime.date.today():
+						bot_message = "Order " + str(ORDER_NUMBER) + " expired"
+						telegram_bot_sendtext(bot_message)
+
 			orders_in_db[key] = orders_in_table[key]
 
 	### Проверяем на необходимость исключения какой-либо записи
@@ -187,6 +191,10 @@ def update_records(relation_name, list_with_data, usd_value):
 			data = (ID, PRICE_USD, SUPPLY_DATE, PRICE_RUB, ORDER_NUMBER)
 			cur.execute(query, data)
 			conn.commit()
+
+			if SUPPLY_DATE < datetime.date.today():
+				bot_message = "Order " + str(ORDER_NUMBER) + " expired"
+				telegram_bot_sendtext(bot_message)
 
 			print(str(order), " was updated")
 

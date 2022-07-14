@@ -1,103 +1,73 @@
-header, section, aside, footer  {
-	color: #ffff;
-	font-size: 2em;
-	font-weight: bold;
-	font-family: arial;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+header, section, aside, footer, body  {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	text-align: center;}
-
-section {
-	justify-content: left;
 }
 
-body {
-	margin:0 0 0 0;
+section {
+	font: 1.2em "Fira Sans", sans-serif;
+
 }
 
 .header {
 	width: 100%;
-	height: 7vh;
-	background: #3a2a9d;
-	position: sticky;
-	top: 0;
-/*	float: right;*/
-	justify-content: flex-end;
-	}
-
-.menu__item {
-	text-decoration: none;
-	padding-right: 40px;
-	color: white;
+	background:  #80ffaa;
 }
 
-.menu__item:hover {
-	opacity: .5;
-	margin-bottom: 6px;
-}
-
-
-.content {
-	display:flex;
-}
-
-.content_sidebar {
+/*.content_graph {
 	width: 20%;
-/*	height: 80vh;*/
-	/*min-height: 100%;*/
-	background: #2fb2b9c4;
-/*	position: sticky;
-	top: 100px;*/
-/* justify-content: center; *//* text-align: center; */}
-
-/*.content_section {
-	width: 80%;
-	height: 86vh;
-	background: #778899;
-	align-items: flex-start;
-	overflow-x: hidden; 
-  	overflow-y: scroll; 
-	font-weight: normal;}
-
-.content_div {
-	display: :block;
-	height: 2rem;
-    margin: 10px 10px;
-    text-align: left;
 }
 */
-.footer {
-	background: #FFA07A;
-	width: 100%;
-	height: 7vh;
-	position: sticky;
-	top: 0;
-}
-
-.content_div > * {
-	display: :block;
-	height: 2rem;
-    margin: 10px 10px;
-    text-align: left;
-}
 
 .content_section {
-    display: block;
-    width: 80%;
-    height: 86vh;
-    background: #778899;
-    align-items: flex-start;
-    text-align: left;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: scroll; /* Add vertical scrollbar */
-    font-weight: normal;
+	margin-left: 50%;
 }
 
-.content_section > * {
-    display: block;
-    height: 2rem;
-    margin: 10px 10px;
+table, td, th {
+  border: 1px solid;
+  border-color: #A9A9A9;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.tb_total{
+	font: 5em "Fira Sans", sans-serif;
+}
+
+.tb_total_header {
+	background: black;
+	color: white;
+	font: 2em "Fira Sans", sans-serif;
+}
+
+.table_2_header {
+	background: black;
+	color: white;
+	font: 1.5em 
+} 
+.table_2_header >th {
+	padding: 10px;
+}
+
+img {
+
+border-radius: 50%;
+transform: scale(0.6);
+ 	
+
+}
+
+
+.logo {
+	padding: 0 0 0 20;
+	font: 1.5em "Fira Sans", sans-serif;
+	align-items: center;
+}
+
+p {
+	margin: 0 0 20 0;
+	padding: 0 0 0 20;
 }

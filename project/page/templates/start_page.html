@@ -5,44 +5,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+	<link rel="stylesheet" href="static/stylesheet.css">
 	<title> KanalService </title>
 </head>
 <body>
 	<header class='header' >
-		<p>TEST PAGE</p>
+		<div class='logo'>
+			<img src="static/photo_2022-07-14 20.59.18.jpeg">
+			<p>Каналсервис</p>
+	</div>
 	</header>
 	<div class='content'>
-		<aside class='content_sidebar'>
-
-		</aside>
 		<section class='content_section'>
-			
-
-			<div class="contetn_div"> 
-
-				<table border="1">
-
+			<div class="contetn_section_total"> 
+				<table>
 					<tr>
-						<th>TOTAL</th>
+						<th class="tb_total_header">TOTAL</th>
 					</tr>
+					<tr class="tb_total">
 						<td> {{ total }} </td>
 					</tr>
-
-
 				</table>
 			</div>
 			
-
 			<div class="contetn_div">
-				<table border="1">
+				<table>
 
-					<tr>
+					<tr class='table_2_header'>
 						<th>№</th>
-						<th>Заказ №</th>
-						<th>Стоимость, $</th>
-						<th>Срок поставки</th>
-						<th>Стоимость, Rub</th>
+						<th width=200px >Заказ №</th>
+						<th width=200px>Стоимость, $</th>
+						<th width=200px>Срок поставки</th>
+						<th width=200px>Стоимость, Rub</th>
 
 				{% for order in orders %}
 					</tr>
@@ -57,6 +51,6 @@
 			</div>
 		</section>
 	</div>
-	<footer class='footer'>FOOTER</footer>
+
 </body>
 </html>
